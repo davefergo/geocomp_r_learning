@@ -44,6 +44,7 @@ world_cents = st_centroid(world, of_largest = TRUE)
 plot(st_geometry(world_cents), add = TRUE, cex = cex)
 
 #and a bounding box example
+#Note the use of [0] to keep only the geometry column and lwd to emphasize India
 india = world[world$name_long == "India", ]
-plot(st_geometry(india), expandBB = c(0, 0.2, 0.1, 1), col = "gray", lwd = 3)
+plot(st_geometry(india), expandBB = c(0.5, 0.5, 0.5, 1), col = "gray", lwd = 3)
 plot(world_asia[0], add = TRUE)
